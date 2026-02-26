@@ -15,7 +15,6 @@ export default function DashboardLayout() {
           <div className="hidden lg:flex ">
             <IconRail />
           </div>
-          {/* Left Sidebar */}
           <aside className="hidden lg:block lg:col-span-3">
             <Sidebar />
           </aside>
@@ -26,9 +25,9 @@ export default function DashboardLayout() {
             <TextPostCard />
           </main>
 
-          <div className="hidden lg:block lg:col-span-3">
+          <aside className="col-span-12 lg:col-span-3">
             <PromoAndSuggestions />
-          </div>
+          </aside>
         </div>
       </div>
     </div>

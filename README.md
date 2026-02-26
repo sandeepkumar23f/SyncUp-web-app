@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SyncUp – Social Dashboard UI
 
-## Getting Started
+SyncUp is a responsive social media dashboard UI that I built using Next.js, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+This project contains two main pages: a Dashboard Page and a JobDashboard Page. The main goal of building this project was to improve my frontend development skills, especially layout structuring, component reusability, and responsive design. I focused on creating a clean UI and organizing the project in a proper and scalable way.
 
-```bash
+GitHub Repository:
+https://github.com/sandeepkumar23f/SyncUp-web-app
+
+
+## Tech Stack
+
+- Next.js 13+ (App Router)
+- TypeScript
+- Tailwind CSS
+- Vercel (for deployment)
+
+
+## What This Project Includes
+
+The Dashboard page includes:
+
+- Responsive dashboard layout
+- Sticky header with search and notifications
+- Left sidebar with profile and navigation
+- Icon rail navigation for desktop view
+- Create post section
+- Post cards (text and image posts)
+- Right sidebar with promo and suggestions
+- Vacancy stats section
+- Task categories (New, In Progress, Pending)
+- Recommended jobs section
+
+Each section is built as a separate component to keep the code modular and reusable.
+
+
+## Responsive Behavior
+
+The layout adjusts based on screen size:
+
+- On mobile devices, only the main feed is visible.
+- On tablet screens, the sidebar and main feed are visible.
+- On large screens, the icon rail, sidebar, main feed, and right section are displayed together.
+
+I used CSS Grid and Flexbox with Tailwind utility classes to handle the layout and responsiveness.
+
+
+## Folder Structure
+
+app/
+- page.tsx
+- job-dashboard/page.tsx
+
+components/
+- layout/
+- post/
+- profile/
+- stories/
+- sidebar/
+
+public/
+- icons
+- profile images
+
+I tried to maintain a clean folder structure so that the project is easy to understand and maintain.
+
+
+## Why I Built This
+
+I built this project to practice:
+
+- Proper layout composition
+- Clean component separation
+- Building UI from scratch without templates
+- Writing structured and scalable frontend code
+- Making everything responsive properly
+
+This project helped me understand how large dashboard applications are structured internally.
+
+
+## How To Run Locally
+
+1. Clone the repository
+
+git clone https://github.com/sandeepkumar23f/SyncUp-web-app.git
+
+2. Install dependencies
+
+npm install
+
+3. Run the development server
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open:
+http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Future Improvements
 
-## Learn More
+- Add authentication system
+- Connect with a real backend
+- Make posts dynamic
+- Add dark mode
+- Improve mobile navigation
+- Add better animations and transitions
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built by Sandeep Kumar

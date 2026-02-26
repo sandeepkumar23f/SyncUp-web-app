@@ -1,9 +1,9 @@
 import Image from "next/image";
 
 const people = [
-  { id: 1, name: "Rakesh Sharma", role: "Front-end Developer" },
-  { id: 2, name: "Rakesh Sharma", role: "Front-end Developer" },
-  { id: 3, name: "Rakesh Sharma", role: "Front-end Developer" },
+  { id: 1, name: "Rakesh Sharma", role: "Front-end Developer", image: "/person.jpg" },
+  { id: 2, name: "Rakesh Sharma", role: "Front-end Developer", image: "/person.jpg" },
+  { id: 3, name: "Rakesh Sharma", role: "Front-end Developer", image: "/person.jpg" },
 ];
 
 export default function StoriesList() {
@@ -18,7 +18,16 @@ export default function StoriesList() {
           <div key={person.id} className="flex items-center justify-between">
             
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gray-200 rounded-full" />
+              
+              {/* Profile Image */}
+              <Image
+                src={person.image}
+                alt={person.name}
+                width={40}
+                height={40}
+                className="rounded-full object-cover"
+              />
+
               <div>
                 <p className="text-sm font-medium text-gray-800">
                   {person.name}

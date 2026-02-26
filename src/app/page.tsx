@@ -1,7 +1,4 @@
-import Image from "next/image";
-
-export default function Home() {
-  return (
-    <h1>SyncUp-web-app</h1>
-  );
+import DashboardLayout from "@/src/components/layout/DashboardLayout";
+export default function DashboardPage() {
+  return <DashboardLayout />;
 }
