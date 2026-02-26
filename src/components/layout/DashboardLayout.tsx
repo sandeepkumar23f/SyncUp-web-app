@@ -4,6 +4,7 @@ import IconRail from "./IconRail";
 import CreatePost from "../post/CreatePost";
 import PostCard from "../post/PostCard";
 import TextPostCard from "../post/TestPostCard";
+import PromoAndSuggestions from "./RightSidebar";
 export default function DashboardLayout() {
   return (
     <div className="min-h-screen bg-gray-100">
@@ -22,14 +23,12 @@ export default function DashboardLayout() {
           <main className="col-span-12 lg:col-span-5 space-y-6">
             <CreatePost />
             <PostCard />
-            <TextPostCard/>
+            <TextPostCard />
           </main>
 
-          <aside className="hidden lg:block lg:col-span-3 bg-white rounded-xl shadow-sm p-4">
-            <div className="h-96 flex items-center justify-center text-gray-400">
-              Right Sidebar
-            </div>
-          </aside>
+          <div className="hidden lg:block lg:col-span-3">
+            <PromoAndSuggestions />
+          </div>
         </div>
       </div>
     </div>
