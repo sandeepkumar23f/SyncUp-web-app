@@ -2,8 +2,7 @@ import Image from "next/image";
 
 export default function IconRail() {
   return (
-    <div className="bg-white rounded-xl shadow-sm w-full flex flex-col items-center py-6 gap-6">
-
+    <div className="bg-white rounded-2xl shadow-sm w-16 flex flex-col items-center py-6 gap-6">
       <NavIcon src="/home-2.png" active />
       <NavIcon src="/user-tick.png" />
       <NavIcon src="/people.png" />
@@ -13,6 +12,7 @@ export default function IconRail() {
     </div>
   );
 }
+
 
 function NavIcon({
   src,
