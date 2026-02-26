@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function RecommendedJobs() {
   return (
     <div className="bg-white p-6 rounded-2xl shadow-sm h-fit text-black">
@@ -10,21 +12,38 @@ export default function RecommendedJobs() {
       {[1, 2, 3].map((item) => (
         <div
           key={item}
-          className="border rounded-xl p-4 mb-4"
+          className="border rounded-xl p-4 mb-4 hover:shadow-md transition"
         >
-          <h3 className="font-medium">UI UX Designer</h3>
-          <p className="text-gray-500 text-sm">
-            SyncUp Technologies
-          </p>
+          {/* Title + Icon */}
+          <div className="flex items-center gap-3">
+            <Image
+              src="/image-fg.png"
+              alt="job-icon"
+              width={40}
+              height={40}
+              className="rounded-lg"
+            />
 
-          <div className="flex justify-between mt-3 text-xs text-gray-400">
+            <div>
+              <h3 className="font-medium">
+                UI UX Designer
+              </h3>
+              <p className="text-gray-500 text-sm">
+                SyncUp Technologies
+              </p>
+            </div>
+          </div>
+
+          {/* Bottom Info */}
+          <div className="flex justify-between mt-4 text-xs text-gray-400">
             <span>Bangalore</span>
             <span>Hybrid</span>
           </div>
         </div>
       ))}
 
-      <button className="w-full border rounded-xl py-2 text-sm text-gray-600">
+      {/* View All Button */}
+      <button className="w-full border rounded-xl py-2 text-sm text-gray-600 hover:bg-gray-50 transition">
         View all posts →
       </button>
     </div>

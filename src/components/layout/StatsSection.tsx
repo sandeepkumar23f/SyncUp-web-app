@@ -1,15 +1,17 @@
 "use client";
 
+import Image from "next/image";
+
 export default function StatsSection() {
   const stats = [
-    { title: "Active Jobs", value: "03" },
-    { title: "Jobs In Progress", value: "03" },
-    { title: "Shortlisted", value: "03" },
-    { title: "On Hold", value: "03" },
+    { title: "Active Jobs", value: "03", icon: "/frame-f1.png" },
+    { title: "Jobs In Progress", value: "03", icon: "/frame-f2.png" },
+    { title: "Shortlisted", value: "03", icon: "/frame-f3.png" },
+    { title: "On Hold", value: "03", icon: "/frame-f4.png" },
   ];
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-black">
       {stats.map((item, index) => (
         <div
           key={index}
@@ -22,13 +24,13 @@ export default function StatsSection() {
               {item.value}
             </span>
 
-            <div className="flex items-end gap-1 h-8">
-              <div className="w-1 bg-blue-400 h-4 rounded"></div>
-              <div className="w-1 bg-blue-500 h-6 rounded"></div>
-              <div className="w-1 bg-blue-600 h-8 rounded"></div>
-              <div className="w-1 bg-blue-400 h-5 rounded"></div>
-              <div className="w-1 bg-blue-500 h-7 rounded"></div>
-            </div>
+            {/* Icon instead of bars */}
+            <Image
+              src={item.icon}
+              alt="stat-icon"
+              width={40}
+              height={40}
+            />
           </div>
 
           <p className="text-green-500 text-xs mt-2">
